@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coppel_exam_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <activity
+        android:id="@+id/contentActivity"
+        android:name="com.example.examencoppel.ContentActivity"
+        android:label="activity_content"
+        tools:layout="@layout/activity_content" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.examencoppel.login.ui.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_marvelFragment"
+            app:destination="@id/marvelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marvelFragment"
+        android:name="com.example.examencoppel.marvel.ui.view.MarvelFragment"
+        android:label="fragment_marvel"
+        tools:layout="@layout/fragment_marvel" >
+        <action
+            android:id="@+id/action_marvelFragment_to_superHeroDetailFragment"
+            app:destination="@id/superHeroDetailFragment" />
+        <action
+            android:id="@+id/action_marvelFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/superHeroDetailFragment"
+        android:name="com.example.examencoppel.marvel.superherodetail.ui.view.SuperHeroDetailFragment"
+        android:label="fragment_super_hero_detail"
+        tools:layout="@layout/fragment_super_hero_detail" >
+        <argument
+            android:name="detailSuperhero"
+            app:argType="com.example.examencoppel.marvel.model.SuperHeroModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

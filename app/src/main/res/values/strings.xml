@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ExamenCoppel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titulo_login">Firebase Authentication</string>
+    <string name="titulo_email">Correo</string>
+    <string name="titulo_password">Contraseña</string>
+</resources>
